@@ -80,6 +80,25 @@ main{padding-top:110px}
 .lead{color:var(--accent);font-weight:600;margin-bottom:8px;font-size:18px}
 .sub{color:var(--muted);margin-bottom:16px}
 .hero-actions{display:flex;gap:12px;margin-bottom:12px}
+.social-buttons{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  margin-top:8px;
+}
+.social-buttons .btn{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+}
+.social-buttons .btn svg{
+  width:16px;
+  height:16px;
+}
+.btn.linkedin{background:#0a66c2}
+.btn.linkedin:hover{background:#004182}
+.btn.github{background:#24292e}
+.btn.github:hover{background:#111418}
 
 /* ---------- PROFILE CARD ---------- */
 .profile-circle{
@@ -155,6 +174,35 @@ main{padding-top:110px}
 .contact-info-card p{margin:6px 0}
 .contact-info-card a{color:var(--accent);text-decoration:none}
 .contact-info-card a:hover{color:var(--accent-light)}
+.contact-info-card .contact-row{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  padding:10px 0;
+  border-bottom:1px solid rgba(148,163,184,0.15);
+}
+.contact-info-card .contact-row:last-child{
+  border-bottom:none;
+}
+.contact-info-card .contact-row svg{
+  width:20px;
+  height:20px;
+  flex-shrink:0;
+  color:var(--accent);
+  fill:currentColor;
+}
+.contact-info-card .contact-row strong{
+  display:block;
+  color:var(--text);
+  font-size:14px;
+  letter-spacing:0.4px;
+  text-transform:uppercase;
+}
+.contact-info-card .contact-row span,
+.contact-info-card .contact-row a{
+  color:var(--muted);
+  font-weight:600;
+}
 .footer{text-align:center;margin:32px 0;color:var(--muted)}
 
 /* ---------- REVEAL / RESPONSIVE ---------- */
@@ -360,7 +408,17 @@ main{padding-top:110px}
         <p class="sub reveal">Focused on ML, secure systems, and real-world impactful solutions.</p>
         <div class="hero-actions reveal">
           <a href="#contact" class="btn magnetic">Contact Me</a>
-          <a href="#projects" class="btn ghost magnetic">View Projects</a>
+          <a href="#projects" class="btn ghost magnetic">See Projects</a>
+        </div>
+        <div class="social-buttons reveal">
+          <a class="btn linkedin" href="https://linkedin.com/in/meetmosfiq" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M19 3A2.94 2.94 0 0 1 22 6v12a2.94 2.94 0 0 1-3 3H5a2.94 2.94 0 0 1-3-3V6a2.94 2.94 0 0 1 3-3h14Zm-.2 14.75V13c0-2.27-1.21-3.32-2.83-3.32a2.45 2.45 0 0 0-2.22 1.22h-.03V9.86H11c.03.6 0 7.89 0 7.89h2.72v-4.4c0-.23.02-.46.1-.63a1.2 1.2 0 0 1 1.12-.74c.79 0 1.1.56 1.1 1.38v4.39Zm-9.63-8.9a1.58 1.58 0 1 0 .02-3.16 1.58 1.58 0 0 0-.02 3.16Zm1.37 8.9V9.86H8.03v7.89ZM6.46 5.41A1.3 1.3 0 0 0 5.13 6.7a1.3 1.3 0 0 0 1.33 1.28 1.3 1.3 0 0 0 1.33-1.29 1.3 1.3 0 0 0-1.33-1.28Z"/></svg>
+            LinkedIn
+          </a>
+          <a class="btn github" href="https://github.com/Musfiq-003" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 .5A11.5 11.5 0 0 0 .5 12.2a11.7 11.7 0 0 0 7.8 11c.6.1.8-.3.8-.6v-2c-3.2.7-3.9-1.5-3.9-1.5-.5-1.2-1.1-1.5-1.1-1.5-.9-.6.1-.6.1-.6 1 .1 1.5 1 1.5 1 .9 1.5 2.5 1.1 3.1.9a2.4 2.4 0 0 1 .7-1.5c-2.5-.3-5.2-1.2-5.2-5.5 0-1.2.4-2.1 1-2.9a3.6 3.6 0 0 1 .1-2.8s.8-.3 2.8 1a9.5 9.5 0 0 1 5 0c2-1.3 2.8-1 2.8-1a3.6 3.6 0 0 1 .1 2.8 4 4 0 0 1 1 2.9c0 4.3-2.7 5.2-5.2 5.5a2.6 2.6 0 0 1 .8 2v3c0 .3.2.7.8.6a11.7 11.7 0 0 0 7.8-11A11.5 11.5 0 0 0 12 .5Z"/></svg>
+            GitHub
+          </a>
         </div>
       </div>
 
@@ -562,10 +620,34 @@ main{padding-top:110px}
     <section id="contact" class="section parallax" data-speed="0.1">
       <h2 class="title reveal">Contact</h2>
       <div class="card reveal contact-info-card">
-        <p><strong>Email:</strong> <a href="mailto:mosfiqqq@gmail.com">mosfiqqq@gmail.com</a></p>
-        <p><strong>Phone:</strong> <a href="tel:+8801726680532">+8801726680532</a></p>
-        <p><strong>GitHub:</strong> <a href="https://github.com/Musfiq-003" target="_blank">Musfiq-003</a></p>
-        <p><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/meetmosfiq" target="_blank">meetmosfiq</a></p>
+        <div class="contact-row">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 4H4a2 2 0 0 0-2 2v12.5A1.5 1.5 0 0 0 3.5 20h17a1.5 1.5 0 0 0 1.5-1.5V6a2 2 0 0 0-2-2Zm-.25 2-7.07 6.18a1 1 0 0 1-1.36 0L4.25 6h15.5ZM4 17.5v-9l5.66 4.95a3 3 0 0 0 3.98 0L19.5 8.5v9Z"/></svg>
+          <div>
+            <strong>Email</strong>
+            <a href="mailto:mosfiqqq@gmail.com">mosfiqqq@gmail.com</a>
+          </div>
+        </div>
+        <div class="contact-row">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.46 14.3c-.8-.18-1.58-.41-2.33-.7a1.47 1.47 0 0 0-1.53.31l-1 1a12.35 12.35 0 0 1-5-5l1-1a1.48 1.48 0 0 0 .31-1.54 14.86 14.86 0 0 1-.7-2.33A1.5 1.5 0 0 0 6.74 4H5.05A1.5 1.5 0 0 0 3.55 5.73 16.63 16.63 0 0 0 18.27 20.45 1.5 1.5 0 0 0 20 18.95v-1.69a1.5 1.5 0 0 0-1.2-1.46Z"/></svg>
+          <div>
+            <strong>Phone</strong>
+            <a href="tel:+8801726680532">+8801726680532</a>
+          </div>
+        </div>
+        <div class="contact-row">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .5A11.5 11.5 0 0 0 .5 12.2a11.7 11.7 0 0 0 7.8 11c.6.1.8-.3.8-.6v-2c-3.2.7-3.9-1.5-3.9-1.5-.5-1.2-1.1-1.5-1.1-1.5-.9-.6.1-.6.1-.6 1 .1 1.5 1 1.5 1 .9 1.5 2.5 1.1 3.1.9a2.4 2.4 0 0 1 .7-1.5c-2.5-.3-5.2-1.2-5.2-5.5 0-1.2.4-2.1 1-2.9a3.6 3.6 0 0 1 .1-2.8s.8-.3 2.8 1a9.5 9.5 0 0 1 5 0c2-1.3 2.8-1 2.8-1a3.6 3.6 0 0 1 .1 2.8 4 4 0 0 1 1 2.9c0 4.3-2.7 5.2-5.2 5.5a2.6 2.6 0 0 1 .8 2v3c0 .3.2.7.8.6a11.7 11.7 0 0 0 7.8-11A11.5 11.5 0 0 0 12 .5Z"/></svg>
+          <div>
+            <strong>GitHub</strong>
+            <a href="https://github.com/Musfiq-003" target="_blank" rel="noopener">Musfiq-003</a>
+          </div>
+        </div>
+        <div class="contact-row">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 3A2.94 2.94 0 0 1 22 6v12a2.94 2.94 0 0 1-3 3H5a2.94 2.94 0 0 1-3-3V6a2.94 2.94 0 0 1 3-3h14Zm-.2 14.75V13c0-2.27-1.21-3.32-2.83-3.32a2.45 2.45 0 0 0-2.22 1.22h-.03V9.86H11c.03.6 0 7.89 0 7.89h2.72v-4.4c0-.23.02-.46.1-.63a1.2 1.2 0 0 1 1.12-.74c.79 0 1.1.56 1.1 1.38v4.39Zm-9.63-8.9a1.58 1.58 0 1 0 .02-3.16 1.58 1.58 0 0 0-.02 3.16Zm1.37 8.9V9.86H8.03v7.89ZM6.46 5.41A1.3 1.3 0 0 0 5.13 6.7a1.3 1.3 0 0 0 1.33 1.28 1.3 1.3 0 0 0 1.33-1.29 1.3 1.3 0 0 0-1.33-1.28Z"/></svg>
+          <div>
+            <strong>LinkedIn</strong>
+            <a href="https://linkedin.com/in/meetmosfiq" target="_blank" rel="noopener">Mosfiqur Rahman</a>
+          </div>
+        </div>
       </div>
     </section>
 
